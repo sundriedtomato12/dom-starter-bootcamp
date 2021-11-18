@@ -1,14 +1,18 @@
 // Please implement exercise logic here
-// create container (div)
+// eslint-disable-next-line no-plusplus
 
-for (let i = 1; i < 7; i++) {
+const words = ['banana', 'pasta', 'alligator', 'purple', 'accurate', 'fickle'];
+
+for (let i = 0; i < 6; i++) {
   const container = document.createElement('div');
   document.body.appendChild(container).className = 'container';
 
   const row = document.createElement('div');
   container.appendChild(row).className = 'row';
 
-  const counter = document.createElement('span');
-  counter.innerText = i;
-  row.appendChild(counter).className = 'word';
+  for (let c = 0; c < 6; c++) {
+    const wordBox = document.createElement('span');
+    wordBox.innerText = words[c];
+    row.appendChild(wordBox).className = 'word';
+  }
 }
